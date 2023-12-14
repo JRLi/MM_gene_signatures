@@ -5,7 +5,7 @@ reg <- read.csv('Signature08_10genes.csv', header=T, row.names=1)
 source("base5.R")
 
 data <- CoMMpass.log10FPKM
-xx <- base5(data, reg, perm=100, 'tmp.txt', median.norm=T)
+xx <- base5(data, reg, perm=1000, 'tmp.txt', median.norm=T)
 
 ES <- xx[[1]]
 nn <- ncol(ES)/2
